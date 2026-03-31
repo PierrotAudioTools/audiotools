@@ -1,45 +1,45 @@
 const tools = [
   {
-    name: "Session Prep",
-    category: "Pré-production",
+    name: "Outil 01",
+    category: "Utilitaire audio",
     access: "Téléchargement direct",
     status: "Disponible",
     description:
-      "Prépare rapidement une session audio: renommage de fichiers, rangement de stems, normalisation de structures et vérifications avant livraison.",
-    formats: ["macOS", "Utility App", "Version 1.2"],
-    primaryLabel: "Télécharger",
+      "Présentation générique d'un outil audio disponible en téléchargement direct.",
+    formats: ["macOS", "ZIP"],
+    primaryLabel: "Accéder",
     primaryUrl: "https://github.com/PierrotAudioTools/tools-pres/releases",
-    secondaryLabel: "Voir la release",
+    secondaryLabel: "Détails",
     secondaryUrl: "https://github.com/PierrotAudioTools/tools-pres/releases",
-    note: "Pensé pour gagner du temps avant mix, mastering ou livraison client."
+    note: "Tu pourras remplacer ce contenu par un vrai projet ou un vrai lien."
   },
   {
-    name: "Loudness Snap",
-    category: "Analyse",
+    name: "Outil 02",
+    category: "Projet GitHub",
     access: "Repo GitHub",
     status: "Disponible",
     description:
-      "Analyse rapidement des fichiers ou exports pour obtenir une lecture claire de niveau, cohérence et état global avant publication ou review.",
-    formats: ["Cross-platform", "CLI", "Open Source"],
-    primaryLabel: "Ouvrir le projet",
+      "Présentation générique d'un projet audio ou technique accessible depuis GitHub.",
+    formats: ["GitHub", "Source"],
+    primaryLabel: "Accéder",
     primaryUrl: "https://github.com/PierrotAudioTools/tools-pres",
-    secondaryLabel: "Documentation",
+    secondaryLabel: "Détails",
     secondaryUrl: "https://github.com/PierrotAudioTools/tools-pres",
-    note: "Utile pour vérifier vite un render, un stem pack ou un export final."
+    note: "Cette carte peut servir de raccourci vers un autre dépôt."
   },
   {
-    name: "Stem Packager",
-    category: "Delivery",
+    name: "Outil 03",
+    category: "Téléchargement",
     access: "Téléchargement direct",
     status: "Disponible",
     description:
-      "Assemble des stems, bounces et éléments de projet dans une structure propre, prête à archiver, partager ou envoyer à un collaborateur.",
-    formats: ["Windows", "macOS", "ZIP"],
-    primaryLabel: "Télécharger",
+      "Présentation générique d'un build, d'une archive ou d'un package prêt à récupérer.",
+    formats: ["Windows", "macOS", "Download"],
+    primaryLabel: "Accéder",
     primaryUrl: "https://github.com/PierrotAudioTools/tools-pres/releases",
-    secondaryLabel: "Release notes",
+    secondaryLabel: "Détails",
     secondaryUrl: "https://github.com/PierrotAudioTools/tools-pres/releases",
-    note: "Conçu pour les workflows de collaboration, de review et de livraison propre."
+    note: "Le lien principal peut pointer vers un fichier direct ou une page de release."
   }
 ];
 
@@ -63,7 +63,7 @@ function createToolCard(tool) {
       <h3>${tool.name}</h3>
     </div>
     <p class="tool-description">${tool.description}</p>
-    <div class="tool-meta" aria-label="Formats et disponibilité">${metaItems}</div>
+    <div class="tool-meta" aria-label="Informations">${metaItems}</div>
     <div class="tool-access-row">
       <span class="tool-access">${tool.access}</span>
     </div>
