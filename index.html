@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pierre U. | Outils à télécharger</title>
+    <meta
+      name="description"
+      content="Une sélection d'outils utiles, rapides et bien finis, disponibles en téléchargement direct."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Accueil">
+          <span class="brand-mark">PU</span>
+          <span class="brand-copy">
+            <strong>Pierre U.</strong>
+            <span>Tool Foundry</span>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="#outils">Outils</a>
+          <a href="#methode">Méthode</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Outils utiles. Interface nette. Accès direct.</p>
+            <h1>Des outils bien pensés, prêts à être téléchargés et utilisés.</h1>
+            <p class="hero-text">
+              Ce site présente une sélection d'outils conçus pour aller vite,
+              résoudre un problème concret et rester simples à prendre en main.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#outils">Voir les outils</a>
+              <a class="button button-secondary" href="#methode">Pourquoi ce site</a>
+            </div>
+            <ul class="hero-points" aria-label="Points forts">
+              <li>Téléchargement direct</li>
+              <li>Présentation claire</li>
+              <li>Mise à jour facile sur GitHub Pages</li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel" aria-label="Résumé de la collection">
+            <div class="signal-card">
+              <span class="signal-label">Collection</span>
+              <strong id="tool-count">03</strong>
+              <span class="signal-foot">outils disponibles</span>
+            </div>
+            <div class="mini-grid">
+              <article>
+                <span>Formats</span>
+                <strong>.zip, .app, scripts</strong>
+              </article>
+              <article>
+                <span>Livraison</span>
+                <strong>GitHub Releases ou lien direct</strong>
+              </article>
+              <article>
+                <span>Focus</span>
+                <strong>Utilité, vitesse, sobriété</strong>
+              </article>
+              <article>
+                <span>Maintenance</span>
+                <strong>Contenu piloté en JavaScript</strong>
+              </article>
+            </div>
+          </aside>
+        </section>
+
+        <section class="trust-strip" aria-label="Valeurs du site">
+          <p>Conçu pour inspirer confiance et aller à l'essentiel.</p>
+          <p>Pas de friction inutile, juste des outils expliqués proprement.</p>
+          <p>Parfait pour présenter des releases publiques ou privées.</p>
+        </section>
+
+        <section class="tools-section" id="outils">
+          <div class="section-heading">
+            <p class="eyebrow">Catalogue</p>
+            <h2>Outils à télécharger</h2>
+            <p>
+              Chaque carte peut pointer vers un release GitHub, une archive, un
+              repo ou une page de documentation.
+            </p>
+          </div>
+
+          <div class="tools-grid" id="tools-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="method-section" id="methode">
+          <div class="section-heading">
+            <p class="eyebrow">Méthode</p>
+            <h2>Une vitrine simple à maintenir</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Contenu modifiable vite</h3>
+              <p>
+                Les outils affichés sont définis dans un seul fichier JavaScript.
+                Tu peux changer les titres, descriptions, badges et liens sans
+                toucher à la structure HTML.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Compatible GitHub Pages</h3>
+              <p>
+                Aucune dépendance ni build requis. Le site fonctionne en pur
+                HTML, CSS et JavaScript, donc le déploiement reste trivial.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Look plus premium</h3>
+              <p>
+                Typographie expressive, contraste maîtrisé, cartes lisibles,
+                ambiance éditoriale et responsive propre sur mobile.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="cta-section">
+          <div>
+            <p class="eyebrow">Déploiement</p>
+            <h2>Publie rapidement, puis enrichis ton catalogue au fil du temps.</h2>
+          </div>
+          <a class="button button-primary" href="#contact">Me contacter</a>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="contact">
+        <div>
+          <strong>Pierre U.</strong>
+          <p>Présente tes outils avec un site propre, crédible et immédiatement exploitable.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:contact@example.com">contact@example.com</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
