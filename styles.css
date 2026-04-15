@@ -82,10 +82,10 @@ body {
 .intro-section h1 {
   margin: 0;
   font-family: "Manrope", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   white-space: nowrap;
 }
 
@@ -134,15 +134,15 @@ body {
 
 .tool-card h3 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 800;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .tool-description {
   margin: 0;
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: var(--muted);
   max-width: 60ch;
 }
@@ -156,8 +156,8 @@ body {
 }
 
 .tool-preview-img {
-  flex: 0 0 260px;
-  width: 260px;
+  flex: 0 0 340px;
+  width: 340px;
   height: auto;
   border-radius: var(--radius-sm);
   border: 1px solid var(--line);
