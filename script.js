@@ -1,7 +1,7 @@
 const tools = [
   {
+    group: "ADM-OSC",
     name: "ADM-OSC Panner",
-    category: "OSC",
     access: "Direct download",
     status: "Available",
     description:
@@ -15,8 +15,8 @@ const tools = [
     secondaryUrl: "https://github.com/PierrotAudioTools/ADM-OSC-Panner"
   },
   {
+    group: "Timecode",
     name: "LTC Reader",
-    category: "Timecode",
     access: "Direct download",
     status: "Available",
     description:
@@ -33,14 +33,19 @@ const tools = [
 
 const toolsGrid = document.getElementById("tools-grid");
 
+function createCategoryHeader(label) {
+  const header = document.createElement("div");
+  header.className = "category-header";
+  header.textContent = label;
+  return header;
+}
+
 function createToolCard(tool, index) {
   const card = document.createElement("article");
   card.className = "tool-card";
   card.style.animationDelay = `${index * 90}ms`;
 
-  const metaItems = tool.formats
-    .map((item) => `<span>${item}</span>`)
-    .join("");
+  const metaItems = tool.formats.map((item) => `<span>${item}</span>`).join("");
 
   const screenshotHtml = tool.screenshot
     ? `<div class="tool-screenshot">
@@ -50,18 +55,12 @@ function createToolCard(tool, index) {
 
   card.innerHTML = `
     <div class="tool-topline">
-      <span class="tool-tag">${tool.category}</span>
       <span class="tool-status">${tool.status}</span>
     </div>
-    <div>
-      <h3>${tool.name}</h3>
-    </div>
+    <h3>${tool.name}</h3>
     <p class="tool-description">${tool.description}</p>
     <div class="tool-meta" aria-label="Info">${metaItems}</div>
     ${screenshotHtml}
-    <div class="tool-access-row">
-      <span class="tool-access">${tool.access}</span>
-    </div>
     <div class="tool-links">
       <a class="primary-link" href="${tool.primaryUrl}" target="_blank" rel="noreferrer">${tool.primaryLabel}</a>
       <a class="secondary-link" href="${tool.secondaryUrl}" target="_blank" rel="noreferrer">${tool.secondaryLabel}</a>
@@ -75,9 +74,17 @@ function renderTools() {
   if (!toolsGrid) return;
 
   const fragment = document.createDocumentFragment();
-  tools.forEach((tool, index) => {
-    fragment.appendChild(createToolCard(tool, index));
+  let currentGroup = null;
+  let cardIndex = 0;
+
+  tools.forEach((tool) => {
+    if (tool.group !== currentGroup) {
+      currentGroup = tool.group;
+      fragment.appendChild(createCategoryHeader(currentGroup));
+    }
+    fragment.appendChild(createToolCard(tool, cardIndex++));
   });
+
   toolsGrid.appendChild(fragment);
 }
 

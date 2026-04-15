@@ -227,10 +227,19 @@ body::before {
 .tools-grid {
   display: grid;
   gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.tools-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.category-header {
+  grid-column: 1 / -1;
+  padding: 8px 0 4px;
+  font-family: "Syne", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
 }
 
 .tool-card {
