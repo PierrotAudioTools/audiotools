@@ -8,9 +8,9 @@ const tools = [
       "Présentation générique d'un outil audio disponible en téléchargement direct.",
     formats: ["macOS", "ZIP"],
     primaryLabel: "Accéder",
-    primaryUrl: "https://github.com/PierrotAudioTools/tools-pres/releases",
+    primaryUrl: "https://github.com/PierrotAudioTools/audiotools/releases",
     secondaryLabel: "Détails",
-    secondaryUrl: "https://github.com/PierrotAudioTools/tools-pres/releases",
+    secondaryUrl: "https://github.com/PierrotAudioTools/audiotools/releases",
     note: "Tu pourras remplacer ce contenu par un vrai projet ou un vrai lien."
   },
   {
@@ -22,9 +22,9 @@ const tools = [
       "Présentation générique d'un projet audio ou technique accessible depuis GitHub.",
     formats: ["GitHub", "Source"],
     primaryLabel: "Accéder",
-    primaryUrl: "https://github.com/PierrotAudioTools/tools-pres",
+    primaryUrl: "https://github.com/PierrotAudioTools/audiotools",
     secondaryLabel: "Détails",
-    secondaryUrl: "https://github.com/PierrotAudioTools/tools-pres",
+    secondaryUrl: "https://github.com/PierrotAudioTools/audiotools",
     note: "Cette carte peut servir de raccourci vers un autre dépôt."
   },
   {
@@ -36,9 +36,9 @@ const tools = [
       "Présentation générique d'un build, d'une archive ou d'un package prêt à récupérer.",
     formats: ["Windows", "macOS", "Download"],
     primaryLabel: "Accéder",
-    primaryUrl: "https://github.com/PierrotAudioTools/tools-pres/releases",
+    primaryUrl: "https://github.com/PierrotAudioTools/audiotools/releases",
     secondaryLabel: "Détails",
-    secondaryUrl: "https://github.com/PierrotAudioTools/tools-pres/releases",
+    secondaryUrl: "https://github.com/PierrotAudioTools/audiotools/releases",
     note: "Le lien principal peut pointer vers un fichier direct ou une page de release."
   }
 ];
