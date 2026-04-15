@@ -2,11 +2,16 @@ const tools = [
   {
     group: "ADM-OSC",
     name: "ADM-OSC Panner",
-    access: "Direct download",
-    status: "Available",
     description:
-      "VST/AU plugin for macOS Apple Silicon. Receive, transmit and record ADM-OSC messages from any compatible DAW. Designed for immersive audio workflows.",
-    formats: ["macOS ARM", "VST3", "AU", "OSC"],
+      "Receive, transmit and record ADM-OSC messages from any compatible DAW. Designed for immersive audio workflows.",
+    features: [
+      "OSC server & client",
+      "Cartesian and Polar modes",
+      "Per-object XYZ control",
+      "Multi-instance hub mode",
+      "DAW automation"
+    ],
+    formats: ["macOS ARM", "VST3", "AU"],
     screenshot: "./assets/ADM-OSC_Panner/ADM-OSC Panner_fullview.png",
     screenshotAlt: "ADM-OSC Panner plugin screenshot",
     primaryLabel: "Download",
@@ -17,11 +22,15 @@ const tools = [
   {
     group: "Timecode",
     name: "LTC Reader",
-    access: "Direct download",
-    status: "Available",
     description:
-      "VST/AU plugin for macOS Apple Silicon. Receive and decode LTC (Linear Timecode) from any audio input, with frame rate selection.",
-    formats: ["macOS ARM", "VST3", "AU", "LTC"],
+      "Receive and decode LTC (Linear Timecode) from any audio input, with frame rate selection.",
+    features: [
+      "LTC decoding",
+      "24 / 25 / 29.97 / 30 fps",
+      "Real-time HH:MM:SS:FF display",
+      "Any DAW compatible"
+    ],
+    formats: ["macOS ARM", "VST3", "AU"],
     screenshot: "./assets/LTC-Reader/LTC-Reader-working.png",
     screenshotAlt: "LTC Reader plugin screenshot",
     primaryLabel: "Download",
@@ -46,24 +55,28 @@ function createToolCard(tool, index) {
   card.style.animationDelay = `${index * 90}ms`;
 
   const metaItems = tool.formats.map((item) => `<span>${item}</span>`).join("");
+  const featureItems = tool.features.map((f) => `<li>${f}</li>`).join("");
 
   const previewHtml = tool.screenshot
-    ? `<div class="tool-preview">
-        <img src="${tool.screenshot}" alt="${tool.screenshotAlt}" loading="lazy" />
-      </div>`
+    ? `<img src="${tool.screenshot}" alt="${tool.screenshotAlt}" loading="lazy" class="tool-preview-img" />`
     : "";
 
   card.innerHTML = `
-    <div class="tool-info">
+    <div class="tool-top">
       <h3>${tool.name}</h3>
       <p class="tool-description">${tool.description}</p>
-      <div class="tool-meta" aria-label="Info">${metaItems}</div>
+    </div>
+    <div class="tool-body">
+      ${previewHtml}
+      <ul class="tool-features">${featureItems}</ul>
+    </div>
+    <div class="tool-bottom">
+      <div class="tool-meta">${metaItems}</div>
       <div class="tool-links">
         <a class="primary-link" href="${tool.primaryUrl}" target="_blank" rel="noreferrer">${tool.primaryLabel}</a>
         <a class="secondary-link" href="${tool.secondaryUrl}" target="_blank" rel="noreferrer">${tool.secondaryLabel}</a>
       </div>
     </div>
-    ${previewHtml}
   `;
 
   return card;
